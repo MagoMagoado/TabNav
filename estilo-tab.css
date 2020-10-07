@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-size: 12pt;
+}
+
+/* Style the tab */
+.tab{
+  float: left;
+  border-right: 1px solid #ccc;
+  width: 20%;
+  height: fit-content;/*Preenche todo o conteúdo*/
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab .tablinks{
+  display: block;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: black;
+  padding: 18px 16px;
+  width: 100%;
+  outline: none;/*para tirar o estilo do botão*/
+  text-align: left;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+/* Change background color of buttons on hover */
+.tab .tablinks:hover{
+  background-color: #dfdede;
+}
+
+/* Create an active/current "tab button" class */
+.active{
+  background-color: #dfdede;
+  border-right: inset 5px #ff0000;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  
+}
+
+/*-------------------------- Carousel ----------------------------*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 5vh 2vh 5vh 2vh;
+}
+
+#segunda .swiper-container{background-color: rgb(28, 80, 221);}
+#terca .swiper-container{background-color: rgb(202, 240, 113);}
+#quarta .swiper-container{background-color: rgb(253, 83, 31);}
+#quinta .swiper-container{background-color: rgb(39, 243, 243);}
+#sexta .swiper-container{background-color: rgb(253, 71, 132);}
+#sabado .swiper-container{background-color: rgb(185, 53, 247);}
+#domingo .swiper-container{background-color: rgb(228, 139, 23);}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+[class^="swiper-button-"] {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .6s ease;
+}
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+  opacity: 1;
+  visibility: visible;
+}
